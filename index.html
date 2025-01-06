@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سمو الأمير</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1494389945381-b1d3f85e6e56') no-repeat center center/cover;
+            min-height: 100vh;
+            color: #fff;
+            overflow: hidden;
+            transition: background 0.3s ease;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(0, 0, 10, 0.85);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            background-color: #ffc700;
+            padding: 3px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin: 10px 0;
+            color: #f7c600;
+            text-shadow: 0 0 10px #f7c600, 0 0 20px #f7c600;
+        }
+
+        .bio {
+            font-size: 16px;
+            color: #ddd;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .link-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+            color: #fff;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3), 0 0 10px rgba(247, 198, 0, 0.6);
+            position: relative;
+        }
+
+        .link-button:hover {
+            background-color: #d96aff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3), 0 0 20px rgba(247, 198, 0, 0.9);
+        }
+
+        .link-button .material-icons {
+            font-size: 20px;
+            margin-right: 8px;
+            color: #f7c600;
+        }
+
+        .theme-toggle {
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #f7c600;
+            color: #222;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: background 0.3s, color 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .theme-toggle:hover {
+            background-color: #222;
+            color: #f7c600;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .footer a {
+            color: #f7c600;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-image">
+            <img src="k.jpg" alt="Profile">
+        </div>      
+        <h1>سمو الأمير</h1>
+        <p class="bio">مدير مؤسسة متجر ميرو الخدمي 🌹📦</p>      
+        <a href="https://www.instagram.com/syfamyr503/profilecard/?igsh=MTVvZHFrbXZxYnk3eA==" class="link-button">
+            <span class="material-icons">camera</span> حسابي على إنستغرام
+        </a>
+        <a href="https://t.me/onno_n" class="link-button">
+            <span class="material-icons">telegram</span> حسابي على تيليجرام
+        </a>   
+        <a href="https://t.me/mmaa1253" class="link-button">
+            <span class="material-icons">info</span> قناة المتجر
+        </a>        
+        <a href="https://t.me/ono_nBT_bot?start=0006ir22s7" class="link-button">
+            <span class="material-icons">telegram</span> رابط المتجر
+        </a>   
+        <button class="theme-toggle" onclick="toggleTheme()">💡</button>
+    </div>
+
+    <div class="footer">
+        <p>جميع الحقوق محفوظة &copy; 2025 - تصميم وتطوير: <a href="https://www.ali-altaee.free.nf">علي الطائي</a></p>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.style.background = document.body.style.background.includes('rgba(0, 0, 0') 
+                ? '#f7f7f7' 
+                : "linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7))";
+        }
+    </script>
+</body>
+</html>
